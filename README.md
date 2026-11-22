@@ -170,6 +170,18 @@ For application-specific scripts, configuration, and development instructions, r
 
 **GitHub:** [ho3ein81/kilinik-hub](https://github.com/ho3ein81/kilinik-hub)
 
+---
+
+## ⭐ Featured Projects
+
+Explore some of my other projects:
+
+- [KafeHub](https://github.com/ho3ein81/kafehub) — Cafe Management Dashboard
+- [VOLTEC](https://github.com/ho3ein81/Voltec_project) — ERP Management System
+- [FARAM](https://github.com/ho3ein81/FARAM) — Full-Stack Digital Studio
+
+---
+
 ## License
 
 No license has been specified yet. All rights are reserved unless a license is added to this repository.
