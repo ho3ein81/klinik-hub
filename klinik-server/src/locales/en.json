@@ -1,0 +1,158 @@
+{
+  "adminUser": {
+    "loginSuccess": "Admin user logged in successfully",
+    "retrievedSuccess": "Admin user retrieved successfully",
+    "retrievedAllSuccess": "Admin users retrieved successfully",
+    "createdSuccess": "Admin user created successfully",
+    "updatedSuccess": "Admin user updated successfully",
+    "deletedSuccess": "Admin user deleted successfully",
+    "activatedSuccess": "User activated successfully",
+    "deactivatedSuccess": "User deactivated successfully",
+    "notAuthenticated": "Admin user not authenticated"
+  },
+  "patient": {
+    "otpSentSuccess": "OTP sent successfully",
+    "loginSuccess": "Patient logged in successfully",
+    "refreshedSuccess": "Patient token refreshed successfully",
+    "retrievedSuccess": "Patient retrieved successfully",
+    "retrievedAllSuccess": "Patients retrieved successfully",
+    "createdSuccess": "Patient created successfully",
+    "updatedSuccess": "Patient updated successfully",
+    "deletedSuccess": "Patient deleted successfully",
+    "notAuthenticated": "Patient not authenticated"
+  },
+  "appointment": {
+    "otpSentSuccess": "OTP sent successfully",
+    "bookedSuccess": "Appointment booked successfully",
+    "createdSuccess": "Appointment created successfully",
+    "retrievedSuccess": "Appointment retrieved successfully",
+    "retrievedAllSuccess": "Appointments retrieved successfully",
+    "cancelledSuccess": "Appointment cancelled successfully",
+    "approvedSuccess": "Appointment approved successfully",
+    "completedSuccess": "Appointment completed successfully",
+    "rejectedSuccess": "Appointment rejected successfully",
+    "markedNotShownSuccess": "Appointment marked as not shown successfully",
+    "rescheduledSuccess": "Appointment rescheduled successfully",
+    "statisticsRetrievedSuccess": "Appointment statistics retrieved successfully",
+    "patientBookingDisabled": "Online booking is currently disabled for this clinic. Please contact the clinic directly to schedule an appointment."
+  },
+  "otp": {
+    "tooManyRequests": "Please wait before requesting another code"
+  },
+  "clinicContact": {
+    "createdSuccess": "Clinic contact created successfully",
+    "retrievedSuccess": "Clinic contact retrieved successfully",
+    "retrievedAllSuccess": "Clinic contacts retrieved successfully",
+    "updatedSuccess": "Clinic contact updated successfully",
+    "deletedSuccess": "Clinic contact deleted successfully"
+  },
+  "clinicUser": {
+    "loginSuccess": "Clinic user logged in successfully",
+    "retrievedSuccess": "Clinic user retrieved successfully",
+    "retrievedAllSuccess": "Clinic users retrieved successfully",
+    "createdSuccess": "Clinic user created successfully",
+    "updatedSuccess": "Clinic user updated successfully",
+    "deletedSuccess": "Clinic user deleted successfully",
+    "refreshedSuccess": "Clinic user refreshed successfully",
+    "passwordChangedSuccess": "Password changed successfully",
+    "activatedSuccess": "User activated successfully",
+    "deactivatedSuccess": "User deactivated successfully",
+    "notAuthenticated": "Clinic user not authenticated",
+    "adminOnly": "Only administrators can perform this action",
+    "typeChangeForbidden": "Only administrators can change a user's role",
+    "specialtyDoctorOnly": "Specialties can only be assigned to a clinic user of type DOCTOR"
+  },
+  "doctorAvailability": {
+    "createdSuccess": "Doctor availability created successfully",
+    "retrievedSuccess": "Doctor availability retrieved successfully",
+    "retrievedAllSuccess": "Doctor availabilities retrieved successfully",
+    "updatedSuccess": "Doctor availability updated successfully",
+    "deletedSuccess": "Doctor availability deleted successfully",
+    "activatedSuccess": "Doctor availability activated successfully",
+    "deactivatedSuccess": "Doctor availability deactivated successfully",
+    "slotsRetrievedSuccess": "Doctor availability slots retrieved successfully",
+    "firstSlotRetrievedSuccess": "Doctor first availability slot retrieved successfully",
+    "doctorTypeRequired": "Availability can only be created for a clinic user of type DOCTOR",
+    "doctorOrAdminOnly": "Only doctors or administrators can access availabilities",
+    "notOwner": "Doctors can only manage their own availability"
+  },
+  "doctorBlockedTime": {
+    "createdSuccess": "Blocked time created successfully",
+    "retrievedSuccess": "Blocked time retrieved successfully",
+    "retrievedAllSuccess": "Blocked times retrieved successfully",
+    "deletedSuccess": "Blocked time deleted successfully",
+    "doctorTypeRequired": "Blocked time can only be created for a clinic user of type DOCTOR",
+    "notOwner": "Doctors can only manage their own blocked time",
+    "overlapping": "This period overlaps with an existing blocked time",
+    "hasAppointmentConflict": "You have an appointment during this period. Please reject or cancel it before blocking this time."
+  },
+  "clinicSetting": {
+    "retrievedSuccess": "Clinic setting retrieved successfully",
+    "updatedSuccess": "Clinic setting updated successfully"
+  },
+  "article": {
+    "createdSuccess": "Article created successfully",
+    "retrievedSuccess": "Article retrieved successfully",
+    "retrievedAllSuccess": "Articles retrieved successfully",
+    "updatedSuccess": "Article updated successfully",
+    "deletedSuccess": "Article deleted successfully",
+    "publishedSuccess": "Article published successfully",
+    "archivedSuccess": "Article archived successfully",
+    "alreadyPublished": "Article is already published",
+    "alreadyArchived": "Article is already archived"
+  },
+  "service": {
+    "createdSuccess": "Service created successfully",
+    "retrievedSuccess": "Service retrieved successfully",
+    "retrievedAllSuccess": "Services retrieved successfully",
+    "updatedSuccess": "Service updated successfully",
+    "deletedSuccess": "Service deleted successfully",
+    "activatedSuccess": "Service activated successfully",
+    "deactivatedSuccess": "Service deactivated successfully"
+  },
+  "specialty": {
+    "createdSuccess": "Specialty created successfully",
+    "retrievedSuccess": "Specialty retrieved successfully",
+    "retrievedAllSuccess": "Specialties retrieved successfully",
+    "updatedSuccess": "Specialty updated successfully",
+    "deletedSuccess": "Specialty deleted successfully",
+    "activatedSuccess": "Specialty activated successfully",
+    "deactivatedSuccess": "Specialty deactivated successfully"
+  },
+  "auth": {
+    "noTokenProvided": "Unauthorized: no token found in request headers.",
+    "invalidAuthentication": "Invalid authentication",
+    "invalidOrExpiredToken": "Invalid or expired token"
+  },
+  "errors": {
+    "badRequest": "Bad request",
+    "unauthorized": "Unauthorized",
+    "forbidden": "Forbidden",
+    "notFound": "Not found",
+    "conflict": "Conflict",
+    "invalidResourceValue": "Invalid resource value",
+    "overlappingValue": "Overlapping value",
+    "validationFailed": "Validation failed",
+    "resourceAlreadyExists": "Resource already exists",
+    "resourceNotFound": "Resource not found",
+    "databaseError": "Database error",
+    "invalidDatabaseRequest": "Invalid database request",
+    "fileTooLarge": "File too large",
+    "tooManyFiles": "Too many files",
+    "fileUploadError": "File upload error",
+    "internalServerError": "Internal server error",
+    "tooManyRequests": "Too many requests"
+  },
+  "common": {
+    "success": "Success",
+    "created": "Resource created successfully",
+    "updated": "Resource updated successfully",
+    "deleted": "Resource deleted successfully"
+  },
+  "notifications": {
+    "appointmentBookedPatient": "Dear {{patientName}}, your appointment has been successfully booked for {{date}} at {{time}}.",
+    "appointmentBookedDoctor": "Dr. {{doctorName}}, a new appointment has been booked for patient {{patientName}} on {{date}} at {{time}}.",
+    "appointmentRejectedPatient": "Dear {{patientName}}, your appointment scheduled for {{date}} at {{time}} has been rejected.",
+    "otpCode": "Your verification code is {{code}}. It will expire in {{minutes}} minutes."
+  }
+}

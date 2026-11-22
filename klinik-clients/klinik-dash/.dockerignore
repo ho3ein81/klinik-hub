@@ -1,0 +1,46 @@
+# Dependencies and build output. Both are populated on the host with
+# darwin-arm64 native binaries — shipping them into the context would poison
+# `npm ci` and slow every build.
+node_modules
+.next
+out
+build
+dist
+
+# Stale, host-generated TypeScript incremental state.
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Secrets and local config. .env.local pins NEXT_PUBLIC_API_BASE_URL at
+# localhost:5000; it must never reach the build, where it could be inlined
+# into the bundle. (Next's env loader won't override an already-set process
+# env var, so the Dockerfile's ARG->ENV wins regardless — this is defence in
+# depth.)
+.env
+.env.*
+
+# VCS and CI
+.git
+.gitignore
+.github
+
+# Docker's own files
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Editor / OS noise
+.DS_Store
+.vscode
+.idea
+*.swp
+
+# Docs, logs, coverage
+README.md
+readme.md
+README-INTEGRATION.md
+*.log
+npm-debug.log*
+coverage
+.nyc_output
+.vercel

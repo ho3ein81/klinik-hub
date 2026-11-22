@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@theme {
+  
+  --color-primary: #424298;
+  --color-primary-hover: #35357a;
+  --color-primary-tint: #eef0fa;
+
+  
+  --color-surface-bg: #f8f9fd;
+  --color-surface-card: #ffffff;
+
+  
+  --color-border: #e6e8f2;
+  --color-border-subtle: #f0f2f8;
+
+  
+  --color-text-main: #1e1f38;
+  --color-text-muted: #7a7f9a;
+  --color-text-dimmed: #a0a5bd;
+
+  
+  --color-status-confirmed-bg: #eef0fa;
+  --color-status-confirmed-fg: #424298;
+
+  --color-status-completed-bg: #d1fae5;
+  --color-status-completed-fg: #059669;
+
+  --color-status-booked-bg: #fef3c7;
+  --color-status-booked-fg: #d97706;
+
+  --color-status-cancelled-bg: #f3f4f6;
+  --color-status-cancelled-fg: #4b5563;
+
+  --color-status-rejected-bg: #fee2e2;
+  --color-status-rejected-fg: #dc2626;
+
+  
+  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  --shadow-dropdown: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+
+  
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+}
+
+
+body {
+  background-color: var(--color-surface-bg);
+  color: var(--color-text-main);
+  font-family: inherit;
+}
+
+/* ── Floating panel open/close transition (calendar + dropdown) ────────── */
+
+@keyframes panel-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.panel-enter {
+  animation: panel-fade-in 150ms ease-out;
+}
+
+/* ── Calendar / date-time picker ────────────────────────────────────────
+   Gregorian calendar with an optional 12-hour AM/PM time section, used by
+   the shared <DatePicker> component. */
+
+.calendar-panel {
+  min-width: 280px;
+  max-width: min(320px, calc(100vw - 1.5rem));
+  width: max-content;
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-dropdown);
+  padding: 0.875rem;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.calendar-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.calendar-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.calendar-nav-btn:hover:not(:disabled) {
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+.calendar-nav-btn:disabled {
+  color: var(--color-text-dimmed);
+  cursor: not-allowed;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.125rem;
+}
+
+.calendar-weekday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 0.375rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-dimmed);
+}
+
+.calendar-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-text-main);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.calendar-day:hover:not(:disabled) {
+  background-color: var(--color-primary-tint);
+}
+
+.calendar-day--outside {
+  color: var(--color-text-dimmed);
+}
+
+.calendar-day--today {
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.calendar-day--selected,
+.calendar-day--selected:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-surface-card);
+  font-weight: 600;
+}
+
+.calendar-day:disabled {
+  color: var(--color-text-dimmed);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.calendar-time-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.875rem;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.calendar-time-label {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  white-space: nowrap;
+}
+
+/* ── Dropdown / select ───────────────────────────────────────────────────
+   Used by the shared <Select> component; the trigger mirrors <Input>. */
+
+.select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  padding-inline: 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-card);
+  color: var(--color-text-main);
+  font-size: 0.875rem;
+  text-align: start;
+  cursor: pointer;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.select-trigger:focus-visible {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-tint);
+}
+
+.select-trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--color-surface-bg);
+}
+
+.select-trigger--error {
+  border-color: var(--color-status-rejected-fg);
+}
+
+.select-trigger--placeholder {
+  color: var(--color-text-dimmed);
+}
+
+.select-panel {
+  max-height: 16rem;
+  max-width: calc(100vw - 1.5rem);
+  overflow-y: auto;
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-dropdown);
+  padding: 0.25rem;
+}
+
+.select-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  padding-inline: 0.75rem;
+  padding-block: 0.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  color: var(--color-text-main);
+  font-size: 0.875rem;
+  text-align: start;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.select-option:hover:not(:disabled) {
+  background-color: var(--color-primary-tint);
+}
+
+.select-option--selected {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.select-option:disabled {
+  color: var(--color-text-dimmed);
+  cursor: not-allowed;
+}

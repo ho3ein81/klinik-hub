@@ -1,0 +1,498 @@
+{
+  "common": {
+    "back": "Zurück",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "view": "Ansehen",
+    "filter": "Filtern",
+    "search": "Suchen",
+    "all": "Alle",
+    "status": "Status",
+    "actions": "Aktionen",
+    "active": "Aktiv",
+    "inactive": "Inaktiv",
+    "activate": "Aktivieren",
+    "deactivate": "Deaktivieren",
+    "loading": "Wird geladen...",
+    "noData": "Keine Daten verfügbar",
+    "newAppointment": "Neuer Termin",
+    "genericError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "validation": {
+      "required": "Dieses Feld ist erforderlich",
+      "minLength": "Muss mindestens {min} Zeichen lang sein",
+      "maxLength": "Darf höchstens {max} Zeichen lang sein",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "invalidPhone": "Telefonnummer muss 7-15 Ziffern enthalten",
+      "invalidTime": "Uhrzeit muss im Format HH:mm sein",
+      "positiveNumber": "Muss eine positive Zahl sein",
+      "endAfterStart": "Die Endzeit muss nach der Startzeit liegen",
+      "selectDoctor": "Bitte wählen Sie einen Arzt aus",
+      "selectPatient": "Bitte wählen Sie einen Patienten aus",
+      "patientRequired": "Wählen Sie einen bestehenden Patienten oder füllen Sie die Angaben für einen neuen Patienten aus"
+    },
+    "pageInfo": "Seite {page} von {totalPages}",
+    "allRightsReserved": "Alle Rechte vorbehalten."
+  },
+  "navigation": {
+    "dashboard": "Übersicht",
+    "appointments": "Termine",
+    "users": "Praxisteam",
+    "doctorAvailabilities": "Verfügbarkeit",
+    "patients": "Patienten",
+    "services": "Leistungen",
+    "settings": "Einstellungen",
+    "closeSidebar": "Navigationsleiste schliessen",
+    "specialties": "Fachrichtungen",
+    "articles": "Artikel",
+    "logout": "Abmelden"
+  },
+  "sidebar": {
+    "branchLabel": "Praxis",
+    "branchLoading": "Wird geladen...",
+    "roleAdmin": "Administrator",
+    "roleDoctor": "Arzt",
+    "roleNurse": "Pflegefachperson",
+    "roleReceptionist": "Empfang"
+  },
+  "dashboard": {
+    "title": "Übersicht",
+    "subtitle": "Willkommen im Nān-Klinik-Verwaltungsbereich",
+    "chart": {
+      "title": "Terminstatus im Vergleich",
+      "subtitle": "Gebucht, abgeschlossen, storniert und nicht erschienen in den letzten 4 Monaten",
+      "total": "Gesamt",
+      "empty": "In den letzten 4 Monaten wurden keine Termine erfasst.",
+      "showTable": "Datentabelle anzeigen",
+      "hideTable": "Datentabelle ausblenden",
+      "ariaLabel": "Gruppiertes Balkendiagramm der Terminanzahl pro Status für die letzten vier Monate",
+      "tableCaption": "Terminanzahl pro Status für die letzten vier Monate",
+      "columns": {
+        "month": "Monat"
+      }
+    },
+    "stats": {
+      "total": "Gesamt",
+      "booked": "Gebucht",
+      "approved": "Bestätigt",
+      "completed": "Abgeschlossen",
+      "cancelled": "Storniert",
+      "rejected": "Abgelehnt",
+      "notShow": "Nicht erschienen"
+    },
+    "schedule": {
+      "title": "Heutiger Zeitplan",
+      "empty": "Für heute sind keine Termine geplant.",
+      "columns": {
+        "time": "Uhrzeit",
+        "patient": "Patient",
+        "doctor": "Arzt",
+        "status": "Status"
+      }
+    },
+    "status": {
+      "BOOKED": "Gebucht",
+      "APPROVED": "Bestätigt",
+      "COMPLETED": "Abgeschlossen",
+      "CANCELLED": "Storniert",
+      "REJECTED": "Abgelehnt",
+      "NOT_SHOW": "Nicht erschienen"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Willkommen zurück",
+      "subtitle": "Melden Sie sich an, um Ihr Dashboard zu öffnen",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "submit": "Anmelden",
+      "submitting": "Anmeldung läuft...",
+      "genericError": "Anmeldung nicht möglich. Bitte überprüfen Sie Ihre Angaben."
+    }
+  },
+  "appointments": {
+    "title": "Termine",
+    "description": "Verwalten Sie Buchungen, Praxiszeitpläne und die tägliche Verfügbarkeit der Ärzte.",
+    "searchPlaceholder": "Nach Patientenname oder Telefon suchen",
+    "newAppointment": "Neuer Termin",
+    "allStatuses": "Alle Status",
+    "table": {
+      "patient": "Patient",
+      "doctorService": "Arzt",
+      "dateTime": "Datum & Uhrzeit",
+      "status": "Status",
+      "actions": "Aktionen"
+    },
+    "status": {
+      "BOOKED": "Gebucht",
+      "APPROVED": "Bestätigt",
+      "COMPLETED": "Abgeschlossen",
+      "CANCELLED": "Storniert",
+      "REJECTED": "Abgelehnt",
+      "NOT_SHOW": "Nicht erschienen"
+    },
+    "actions": {
+      "approve": "Bestätigen",
+      "reject": "Ablehnen",
+      "complete": "Abschliessen",
+      "notShow": "Als nicht erschienen markieren"
+    },
+    "form": {
+      "patient": "Patient",
+      "existingPatient": "Bestehender Patient",
+      "newPatient": "Neuer Patient",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "phone": "Telefon",
+      "doctor": "Arzt",
+      "noDoctors": "Keine Ärzte verfügbar",
+      "date": "Datum",
+      "startTime": "Startzeit",
+      "endTime": "Endzeit",
+      "availableSlots": "Verfügbare Zeiten",
+      "noSlots": "Keine verfügbaren Zeiten für dieses Datum. Wählen Sie ein anderes Datum.",
+      "selectSlotFirst": "Bitte wählen Sie eine verfügbare Zeit aus.",
+      "subject": "Betreff",
+      "description": "Beschreibung",
+      "cancel": "Abbrechen",
+      "create": "Termin erstellen"
+    },
+    "rejectModal": {
+      "title": "Termin ablehnen",
+      "message": "Teilen Sie dem Patienten mit, warum dieser Termin abgelehnt wird (optional).",
+      "reason": "Grund",
+      "reasonPlaceholder": "z. B. Arzt nicht verfügbar, bitte neu buchen"
+    }
+  },
+  "patients": {
+    "title": "Patienten",
+    "description": "Umfassende Patientenakten, Kontaktdaten, Historie und Behandlungsprotokolle.",
+    "export": "Exportieren",
+    "newPatient": "Neuer Patient",
+    "editPatient": "Patient bearbeiten",
+    "searchPlaceholder": "Patient nach Name, ID oder Telefonnummer suchen...",
+    "table": {
+      "name": "Patientenname",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "dateOfBirth": "Geburtsdatum",
+      "actions": "Aktionen"
+    },
+    "gender": {
+      "female": "Weiblich",
+      "male": "Männlich",
+      "other": "Divers"
+    },
+    "years": "Jahre",
+    "visits": "Besuche",
+    "confirmDelete": {
+      "title": "Patient löschen",
+      "message": "Möchten Sie \"{name}\" wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+    },
+    "form": {
+      "uploadAvatar": "Foto hochladen",
+      "removeAvatar": "Foto entfernen",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "dateOfBirth": "Geburtsdatum",
+      "cancel": "Abbrechen",
+      "save": "Änderungen speichern",
+      "create": "Patient erstellen"
+    }
+  },
+  "services": {
+    "title": "Leistungen & Behandlungen",
+    "description": "Verwalten Sie medizinische Leistungspakete, Tarife und Behandlungsdauern der Praxis.",
+    "addService": "Leistung hinzufügen",
+    "editService": "Leistung bearbeiten",
+    "searchPlaceholder": "Leistung oder Fachbereich suchen...",
+    "currency": "CHF",
+    "minutesShort": "Min.",
+    "status": {
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
+    "actions": {
+      "edit": "Bearbeiten",
+      "delete": "Löschen"
+    },
+    "table": {
+      "name": "Name",
+      "price": "Preis",
+      "duration": "Dauer",
+      "order": "Reihenfolge",
+      "status": "Status",
+      "actions": "Aktionen"
+    },
+    "confirmDelete": {
+      "title": "Leistung löschen",
+      "message": "Möchten Sie \"{name}\" wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+    },
+    "form": {
+      "uploadImage": "Bild hochladen",
+      "name": "Name",
+      "description": "Beschreibung",
+      "price": "Preis",
+      "duration": "Dauer (Minuten)",
+      "durationPlaceholder": "Optional",
+      "order": "Anzeigereihenfolge",
+      "cancel": "Abbrechen",
+      "save": "Änderungen speichern",
+      "create": "Leistung erstellen"
+    }
+  },
+  "articles": {
+    "title": "Artikel",
+    "description": "Veröffentlichen Sie Gesundheitsartikel und Neuigkeiten für Patienten im Patientenportal.",
+    "addArticle": "Artikel hinzufügen",
+    "editArticle": "Artikel bearbeiten",
+    "searchPlaceholder": "Titel oder Inhalt suchen...",
+    "adminNote": "Nur Administratoren können Artikel veröffentlichen oder archivieren.",
+    "status": {
+      "DRAFT": "Entwurf",
+      "PUBLISHED": "Veröffentlicht",
+      "ARCHIVED": "Archiviert"
+    },
+    "actions": {
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "publish": "Veröffentlichen",
+      "archive": "Archivieren"
+    },
+    "table": {
+      "title": "Titel",
+      "status": "Status",
+      "actions": "Aktionen"
+    },
+    "confirmDelete": {
+      "title": "Artikel löschen",
+      "message": "Möchten Sie \"{title}\" wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+    },
+    "form": {
+      "uploadImage": "Bild hochladen",
+      "title": "Titel",
+      "content": "Inhalt",
+      "contentHelper": "Einfacher Text oder einfache HTML-Tags (Absatz, fett, Link) werden unterstützt.",
+      "cancel": "Abbrechen",
+      "save": "Änderungen speichern",
+      "create": "Artikel erstellen"
+    }
+  },
+  "specialties": {
+    "title": "Fachrichtungen",
+    "description": "Verwalten Sie die medizinischen Fachrichtungen der Praxis, mit denen Ärzte kategorisiert werden.",
+    "addSpecialty": "Fachrichtung hinzufügen",
+    "editSpecialty": "Fachrichtung bearbeiten",
+    "searchPlaceholder": "Fachrichtung suchen...",
+    "status": {
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
+    "actions": {
+      "edit": "Bearbeiten",
+      "delete": "Löschen"
+    },
+    "table": {
+      "name": "Name",
+      "description": "Beschreibung",
+      "status": "Status",
+      "actions": "Aktionen"
+    },
+    "confirmDelete": {
+      "title": "Fachrichtung löschen",
+      "message": "Möchten Sie \"{name}\" wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+    },
+    "form": {
+      "name": "Name",
+      "description": "Beschreibung",
+      "cancel": "Abbrechen",
+      "save": "Änderungen speichern",
+      "create": "Fachrichtung erstellen"
+    }
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "description": "Verwalten Sie Praxisdaten, Adresse sowie Telefonnummern und E-Mail-Adressen.",
+    "saveChanges": "Änderungen speichern",
+    "bookingSettings": {
+      "title": "Online-Terminbuchung",
+      "subtitle": "Legen Sie fest, ob Patienten selbst Termine über das Patientenportal buchen können.",
+      "allowLabel": "Patienten erlauben, Termine online zu buchen",
+      "allowDescription": "Wenn deaktiviert, können Patienten weiterhin die Verfügbarkeit der Ärzte einsehen, aber keine neuen Termine buchen — sie werden gebeten, die Praxis direkt zu kontaktieren.",
+      "showArticleLabel": "Artikel im Patientenportal anzeigen",
+      "showArticleDescription": "Wenn deaktiviert, wird der Artikelbereich auf der Startseite des Patientenportals ausgeblendet.",
+      "enabled": "Aktiviert",
+      "disabled": "Deaktiviert"
+    },
+    "sections": {
+      "clinicDetails": "Praxisinformationen",
+      "phoneNumbers": "Telefonnummern",
+      "phoneSubtitle": "Fügen Sie Telefonnummern hinzu und bestimmen Sie die Hauptnummer.",
+      "emailAddresses": "E-Mail-Adressen",
+      "emailSubtitle": "Fügen Sie E-Mail-Adressen hinzu und bestimmen Sie das Hauptpostfach."
+    },
+    "fields": {
+      "clinicImage": "Praxisbild",
+      "clinicName": "Praxisname",
+      "clinicAddress": "Strasse & Standort",
+      "clinicDescription": "Beschreibung",
+      "primaryBadge": "Primär"
+    },
+    "actions": {
+      "uploadImage": "Bild hochladen",
+      "addPhone": "Telefonnummer hinzufügen",
+      "addEmail": "E-Mail hinzufügen"
+    },
+    "contactForm": {
+      "label": "Bezeichnung",
+      "labelPlaceholder": "z. B. Empfang, Rechnungswesen",
+      "type": "Typ",
+      "typePhone": "Telefon",
+      "typeEmail": "E-Mail",
+      "emailValue": "E-Mail-Adresse",
+      "phoneValue": "Telefonnummer",
+      "setPrimary": "Als Hauptkontakt festlegen",
+      "cancel": "Abbrechen",
+      "save": "Speichern",
+      "add": "Hinzufügen",
+      "editTitle": "Kontakt bearbeiten",
+      "addTitle": "Kontakt hinzufügen",
+      "confirmDeleteTitle": "Kontakt löschen",
+      "confirmDeleteMessage": "Möchten Sie \"{value}\" wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+    }
+  },
+  "users": {
+    "title": "Praxisteam",
+    "description": "Verwalten Sie Mitarbeiterkonten, Rollen und Zugriffsrechte Ihrer Praxis.",
+    "addUser": "Benutzer hinzufügen",
+    "editUser": "Benutzer bearbeiten",
+    "searchPlaceholder": "Nach Name, E-Mail oder Telefon suchen...",
+    "adminOnly": "Nur Administratoren können Klinik-Benutzer verwalten.",
+    "table": {
+      "name": "Name",
+      "contact": "Kontakt",
+      "role": "Rolle",
+      "status": "Status",
+      "actions": "Aktionen"
+    },
+    "status": {
+      "active": "Aktiv",
+      "inactive": "Inaktiv"
+    },
+    "actions": {
+      "edit": "Bearbeiten",
+      "activate": "Aktivieren",
+      "deactivate": "Deaktivieren",
+      "delete": "Löschen"
+    },
+    "confirmDelete": {
+      "title": "Benutzer löschen",
+      "message": "Möchten Sie \"{name}\" wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+    },
+    "form": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "role": "Rolle",
+      "specialties": "Fachrichtungen",
+      "noSpecialties": "Noch keine Fachrichtungen vorhanden. Fügen Sie welche auf der Seite Fachrichtungen hinzu.",
+      "roles": {
+        "doctor": "Arzt",
+        "nurse": "Pflegefachperson",
+        "receptionist": "Empfang",
+        "admin": "Administrator"
+      },
+      "password": "Passwort",
+      "passwordHint": "Mindestens 6 Zeichen.",
+      "uploadAvatar": "Foto hochladen",
+      "removeAvatar": "Foto entfernen",
+      "cancel": "Abbrechen",
+      "save": "Änderungen speichern",
+      "create": "Benutzer erstellen"
+    }
+  },
+  "doctorAvailabilities": {
+    "title": "Verfügbarkeit der Ärzte",
+    "description": "Wöchentliche Arbeitszeiten und freie Termine je Arzt.",
+    "addSlot": "Zeitfenster hinzufügen",
+    "editSlot": "Zeitfenster bearbeiten",
+    "notAllowed": "Nur Ärzte und Administratoren können Verfügbarkeiten einsehen.",
+    "days": {
+      "monday": "Montag",
+      "tuesday": "Dienstag",
+      "wednesday": "Mittwoch",
+      "thursday": "Donnerstag",
+      "friday": "Freitag",
+      "saturday": "Samstag",
+      "sunday": "Sonntag"
+    },
+    "confirmDelete": {
+      "title": "Zeitfenster löschen",
+      "message": "Möchten Sie dieses Verfügbarkeits-Zeitfenster wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+    },
+    "form": {
+      "doctor": "Arzt",
+      "noDoctors": "Keine Ärzte verfügbar",
+      "day": "Tag",
+      "startTime": "Startzeit",
+      "endTime": "Endzeit",
+      "durationSlot": "Zeitfensterdauer (Minuten)",
+      "durationSlotHint": "Länge jedes buchbaren Termin-Zeitfensters.",
+      "cancel": "Abbrechen",
+      "save": "Änderungen speichern",
+      "create": "Zeitfenster erstellen"
+    },
+    "blockedTime": {
+      "title": "Abwesenheit / Blockierte Zeit",
+      "description": "Blockieren Sie Stunden, Tage oder Wochen, in denen ein Arzt nicht buchbar ist.",
+      "addBlockedTime": "Abwesenheit hinzufügen",
+      "confirmDelete": {
+        "title": "Abwesenheit entfernen",
+        "message": "Möchten Sie diese blockierte Zeit wirklich entfernen? Die Zeit wird danach wieder buchbar."
+      }
+    },
+    "blockedTimeForm": {
+      "doctor": "Arzt",
+      "noDoctors": "Keine Ärzte verfügbar",
+      "startDate": "Beginn",
+      "endDate": "Ende",
+      "reason": "Grund (optional)",
+      "reasonPlaceholder": "z. B. Ferien, Kongress, Krankheit",
+      "cancel": "Abbrechen",
+      "create": "Zeit blockieren"
+    }
+  },
+  "profile": {
+    "title": "Mein Profil",
+    "description": "Verwalten Sie Ihre persönlichen Angaben, Ihr Foto und Ihr Passwort.",
+    "sections": {
+      "personalInfo": "Persönliche Angaben",
+      "security": "Sicherheit",
+      "dangerZone": "Gefahrenzone"
+    },
+    "saveChanges": "Änderungen speichern",
+    "saveSuccess": "Ihr Profil wurde aktualisiert.",
+    "genericError": "Änderungen konnten nicht gespeichert werden. Bitte versuchen Sie es erneut.",
+    "deactivateHint": "Wenn Sie Ihr Konto deaktivieren, werden Sie sofort abgemeldet und ein Administrator muss es wieder aktivieren.",
+    "deactivateAccount": "Mein Konto deaktivieren",
+    "confirmDeactivate": {
+      "cancel": "Abbrechen",
+      "confirm": "Ja, deaktivieren",
+      "message": "Möchten Sie Ihr Konto wirklich deaktivieren? Sie werden abgemeldet und zur Anmeldeseite weitergeleitet."
+    },
+    "changePassword": {
+      "current": "Aktuelles Passwort",
+      "new": "Neues Passwort",
+      "confirm": "Neues Passwort bestätigen",
+      "submit": "Passwort aktualisieren",
+      "mismatch": "Die neuen Passwörter stimmen nicht überein.",
+      "samePassword": "Das neue Passwort muss sich vom aktuellen Passwort unterscheiden.",
+      "success": "Ihr Passwort wurde geändert.",
+      "genericError": "Passwort konnte nicht geändert werden. Bitte versuchen Sie es erneut."
+    }
+  }
+}

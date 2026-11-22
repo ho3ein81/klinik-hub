@@ -1,0 +1,498 @@
+{
+  "common": {
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "filter": "Filter",
+    "search": "Search",
+    "all": "All",
+    "status": "Status",
+    "actions": "Actions",
+    "active": "Active",
+    "inactive": "Inactive",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "loading": "Loading...",
+    "noData": "No data available",
+    "newAppointment": "New Appointment",
+    "genericError": "Something went wrong. Please try again.",
+    "validation": {
+      "required": "This field is required",
+      "minLength": "Must be at least {min} characters",
+      "maxLength": "Must be at most {max} characters",
+      "invalidEmail": "Invalid email address",
+      "invalidPhone": "Phone number must contain 7-15 digits",
+      "invalidTime": "Time must be in HH:mm format",
+      "positiveNumber": "Must be a positive number",
+      "endAfterStart": "End time must be later than start time",
+      "selectDoctor": "Please select a doctor",
+      "selectPatient": "Please select a patient",
+      "patientRequired": "Select an existing patient or fill in the new patient's details"
+    },
+    "pageInfo": "Page {page} of {totalPages}",
+    "allRightsReserved": "All rights reserved."
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "appointments": "Appointments",
+    "users": "Clinic Users",
+    "doctorAvailabilities": "Doctor Availability",
+    "patients": "Patients",
+    "services": "Services",
+    "settings": "Settings",
+    "closeSidebar": "Close sidebar",
+    "specialties": "Specialties",
+    "articles": "Articles",
+    "logout": "Log Out"
+  },
+  "sidebar": {
+    "branchLabel": "Clinic",
+    "branchLoading": "Loading...",
+    "roleAdmin": "Administrator",
+    "roleDoctor": "Doctor",
+    "roleNurse": "Nurse",
+    "roleReceptionist": "Receptionist"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Welcome to Nān Klinik workspace overview",
+    "chart": {
+      "title": "Appointment status comparison",
+      "subtitle": "Booked, completed, cancelled and no-shows over the last 4 months",
+      "total": "Total",
+      "empty": "No appointments recorded in the last 4 months.",
+      "showTable": "Show data table",
+      "hideTable": "Hide data table",
+      "ariaLabel": "Grouped bar chart of appointment counts per status for the last four months",
+      "tableCaption": "Appointment counts per status for the last four months",
+      "columns": {
+        "month": "Month"
+      }
+    },
+    "stats": {
+      "total": "Total",
+      "booked": "Booked",
+      "approved": "Approved",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "rejected": "Rejected",
+      "notShow": "No Show"
+    },
+    "schedule": {
+      "title": "Today's Schedule",
+      "empty": "No appointments scheduled for today.",
+      "columns": {
+        "time": "Time",
+        "patient": "Patient",
+        "doctor": "Doctor",
+        "status": "Status"
+      }
+    },
+    "status": {
+      "BOOKED": "Booked",
+      "APPROVED": "Approved",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled",
+      "REJECTED": "Rejected",
+      "NOT_SHOW": "No Show"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to access your dashboard",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "submitting": "Signing in...",
+      "genericError": "Unable to sign in. Please check your credentials."
+    }
+  },
+  "appointments": {
+    "title": "Appointments",
+    "description": "Manage patient bookings, clinic schedules, and daily doctor availability.",
+    "searchPlaceholder": "Search by patient name or phone",
+    "newAppointment": "New Appointment",
+    "allStatuses": "All Statuses",
+    "table": {
+      "patient": "Patient",
+      "doctorService": "Doctor",
+      "dateTime": "Date & Time",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "status": {
+      "BOOKED": "Booked",
+      "APPROVED": "Approved",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled",
+      "REJECTED": "Rejected",
+      "NOT_SHOW": "No Show"
+    },
+    "actions": {
+      "approve": "Approve",
+      "reject": "Reject",
+      "complete": "Complete",
+      "notShow": "Mark as No Show"
+    },
+    "form": {
+      "patient": "Patient",
+      "existingPatient": "Existing Patient",
+      "newPatient": "New Patient",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone",
+      "doctor": "Doctor",
+      "noDoctors": "No doctors available",
+      "date": "Date",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "availableSlots": "Available Times",
+      "noSlots": "No available times for this date. Try another date.",
+      "selectSlotFirst": "Please select an available time.",
+      "subject": "Subject",
+      "description": "Description",
+      "cancel": "Cancel",
+      "create": "Create Appointment"
+    },
+    "rejectModal": {
+      "title": "Reject appointment",
+      "message": "Let the patient know why this appointment is being rejected (optional).",
+      "reason": "Reason",
+      "reasonPlaceholder": "e.g. Doctor unavailable, please rebook"
+    }
+  },
+  "patients": {
+    "title": "Patients",
+    "description": "Comprehensive medical records, contact information, history, and treatment logs.",
+    "export": "Export",
+    "newPatient": "New Patient",
+    "editPatient": "Edit Patient",
+    "searchPlaceholder": "Search patient by name, ID, phone...",
+    "table": {
+      "name": "Patient Name",
+      "phone": "Phone",
+      "address": "Address",
+      "dateOfBirth": "Date of Birth",
+      "actions": "Actions"
+    },
+    "gender": {
+      "female": "Female",
+      "male": "Male",
+      "other": "Other"
+    },
+    "years": "yrs",
+    "visits": "visits",
+    "confirmDelete": {
+      "title": "Delete Patient",
+      "message": "Are you sure you want to delete \"{name}\"? This cannot be undone."
+    },
+    "form": {
+      "uploadAvatar": "Upload photo",
+      "removeAvatar": "Remove photo",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone",
+      "address": "Address",
+      "dateOfBirth": "Date of Birth",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "create": "Create Patient"
+    }
+  },
+  "services": {
+    "title": "Services & Treatments",
+    "description": "Organize clinic medical packages, pricing catalogs, and appointment session durations.",
+    "addService": "Add Service",
+    "editService": "Edit Service",
+    "searchPlaceholder": "Search service name, category...",
+    "currency": "CHF",
+    "minutesShort": "min",
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "table": {
+      "name": "Name",
+      "price": "Price",
+      "duration": "Duration",
+      "order": "Order",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "confirmDelete": {
+      "title": "Delete Service",
+      "message": "Are you sure you want to delete \"{name}\"? This cannot be undone."
+    },
+    "form": {
+      "uploadImage": "Upload image",
+      "name": "Name",
+      "description": "Description",
+      "price": "Price",
+      "duration": "Duration (minutes)",
+      "durationPlaceholder": "Optional",
+      "order": "Display Order",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "create": "Create Service"
+    }
+  },
+  "articles": {
+    "title": "Articles",
+    "description": "Publish health articles and news for patients to read in the patient portal.",
+    "addArticle": "Add Article",
+    "editArticle": "Edit Article",
+    "searchPlaceholder": "Search article title or content...",
+    "adminNote": "Only administrators can publish or archive articles.",
+    "status": {
+      "DRAFT": "Draft",
+      "PUBLISHED": "Published",
+      "ARCHIVED": "Archived"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "publish": "Publish",
+      "archive": "Archive"
+    },
+    "table": {
+      "title": "Title",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "confirmDelete": {
+      "title": "Delete Article",
+      "message": "Are you sure you want to delete \"{title}\"? This cannot be undone."
+    },
+    "form": {
+      "uploadImage": "Upload image",
+      "title": "Title",
+      "content": "Content",
+      "contentHelper": "Plain text or basic HTML tags (paragraph, bold, link) are supported.",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "create": "Create Article"
+    }
+  },
+  "specialties": {
+    "title": "Specialties",
+    "description": "Manage the medical specialties available at the clinic, used to categorize doctors.",
+    "addSpecialty": "Add Specialty",
+    "editSpecialty": "Edit Specialty",
+    "searchPlaceholder": "Search specialty name...",
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "table": {
+      "name": "Name",
+      "description": "Description",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "confirmDelete": {
+      "title": "Delete Specialty",
+      "message": "Are you sure you want to delete \"{name}\"? This cannot be undone."
+    },
+    "form": {
+      "name": "Name",
+      "description": "Description",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "create": "Create Specialty"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Manage clinic name, address, phone numbers, and email communication channels.",
+    "saveChanges": "Save Changes",
+    "bookingSettings": {
+      "title": "Online Booking",
+      "subtitle": "Control whether patients can book appointments themselves through the patient portal.",
+      "allowLabel": "Allow patients to book appointments online",
+      "allowDescription": "When turned off, patients can still view doctor availability but cannot submit new bookings — they'll be asked to contact the clinic directly.",
+      "showArticleLabel": "Show articles in the patient portal",
+      "showArticleDescription": "When turned off, the Articles section is hidden from the patient portal homepage.",
+      "enabled": "Enabled",
+      "disabled": "Disabled"
+    },
+    "sections": {
+      "clinicDetails": "Clinic Information",
+      "phoneNumbers": "Phone Numbers",
+      "phoneSubtitle": "Add multiple phone numbers and designate the primary clinic line.",
+      "emailAddresses": "Email Addresses",
+      "emailSubtitle": "Add multiple email channels and designate the primary inbox."
+    },
+    "fields": {
+      "clinicImage": "Clinic Image",
+      "clinicName": "Clinic Name",
+      "clinicAddress": "Street & Location",
+      "clinicDescription": "Description",
+      "primaryBadge": "Primary"
+    },
+    "actions": {
+      "uploadImage": "Upload image",
+      "addPhone": "Add Phone Number",
+      "addEmail": "Add Email Address"
+    },
+    "contactForm": {
+      "label": "Label",
+      "labelPlaceholder": "e.g. Reception, Billing",
+      "type": "Type",
+      "typePhone": "Phone",
+      "typeEmail": "Email",
+      "emailValue": "Email Address",
+      "phoneValue": "Phone Number",
+      "setPrimary": "Set as primary contact",
+      "cancel": "Cancel",
+      "save": "Save",
+      "add": "Add",
+      "editTitle": "Edit Contact",
+      "addTitle": "Add Contact",
+      "confirmDeleteTitle": "Delete Contact",
+      "confirmDeleteMessage": "Are you sure you want to delete \"{value}\"? This cannot be undone."
+    }
+  },
+  "users": {
+    "title": "Clinic Users",
+    "description": "Manage staff accounts, roles, and access for your clinic.",
+    "addUser": "Add User",
+    "editUser": "Edit User",
+    "searchPlaceholder": "Search by name, email, or phone...",
+    "adminOnly": "Only administrators can manage clinic users.",
+    "table": {
+      "name": "Name",
+      "contact": "Contact",
+      "role": "Role",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "actions": {
+      "edit": "Edit",
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "delete": "Delete"
+    },
+    "confirmDelete": {
+      "title": "Delete User",
+      "message": "Are you sure you want to delete \"{name}\"? This cannot be undone."
+    },
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "role": "Role",
+      "specialties": "Specialties",
+      "noSpecialties": "No specialties available yet. Add some in the Specialties page.",
+      "roles": {
+        "doctor": "Doctor",
+        "nurse": "Nurse",
+        "receptionist": "Receptionist",
+        "admin": "Administrator"
+      },
+      "password": "Password",
+      "passwordHint": "At least 6 characters.",
+      "uploadAvatar": "Upload photo",
+      "removeAvatar": "Remove photo",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "create": "Create User"
+    }
+  },
+  "doctorAvailabilities": {
+    "title": "Doctor Availability",
+    "description": "Weekly working hours and open slots for each doctor.",
+    "addSlot": "Add Slot",
+    "editSlot": "Edit Slot",
+    "notAllowed": "Only doctors and administrators can view availabilities.",
+    "days": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    },
+    "confirmDelete": {
+      "title": "Delete Slot",
+      "message": "Are you sure you want to delete this availability slot? This cannot be undone."
+    },
+    "form": {
+      "doctor": "Doctor",
+      "noDoctors": "No doctors available",
+      "day": "Day",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "durationSlot": "Slot Duration (minutes)",
+      "durationSlotHint": "Length of each bookable appointment slot.",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "create": "Create Slot"
+    },
+    "blockedTime": {
+      "title": "Time Off / Blocked Time",
+      "description": "Block off hours, days, or weeks when a doctor is unavailable for booking.",
+      "addBlockedTime": "Add Blocked Time",
+      "confirmDelete": {
+        "title": "Remove Blocked Time",
+        "message": "Are you sure you want to remove this blocked period? The time will become bookable again."
+      }
+    },
+    "blockedTimeForm": {
+      "doctor": "Doctor",
+      "noDoctors": "No doctors available",
+      "startDate": "Start",
+      "endDate": "End",
+      "reason": "Reason (optional)",
+      "reasonPlaceholder": "e.g. Vacation, conference, sick leave",
+      "cancel": "Cancel",
+      "create": "Block Time"
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "description": "Manage your personal information, photo, and password.",
+    "sections": {
+      "personalInfo": "Personal Information",
+      "security": "Security",
+      "dangerZone": "Danger Zone"
+    },
+    "saveChanges": "Save Changes",
+    "saveSuccess": "Your profile has been updated.",
+    "genericError": "Unable to save changes. Please try again.",
+    "deactivateHint": "Deactivating your account will sign you out immediately and an administrator will need to reactivate it.",
+    "deactivateAccount": "Deactivate My Account",
+    "confirmDeactivate": {
+      "cancel": "Cancel",
+      "confirm": "Yes, deactivate",
+      "message": "Are you sure you want to deactivate your account? You will be signed out and redirected to the login page."
+    },
+    "changePassword": {
+      "current": "Current Password",
+      "new": "New Password",
+      "confirm": "Confirm New Password",
+      "submit": "Update Password",
+      "mismatch": "New passwords do not match.",
+      "samePassword": "New password must be different from the current password.",
+      "success": "Your password has been changed.",
+      "genericError": "Unable to change password. Please try again."
+    }
+  }
+}

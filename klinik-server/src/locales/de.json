@@ -1,0 +1,158 @@
+{
+  "adminUser": {
+    "loginSuccess": "Admin-Benutzer erfolgreich eingeloggt",
+    "retrievedSuccess": "Admin-Benutzer erfolgreich abgerufen",
+    "retrievedAllSuccess": "Admin-Benutzer erfolgreich abgerufen",
+    "createdSuccess": "Admin-Benutzer erfolgreich erstellt",
+    "updatedSuccess": "Admin-Benutzer erfolgreich aktualisiert",
+    "deletedSuccess": "Admin-Benutzer erfolgreich gelöscht",
+    "activatedSuccess": "Benutzer erfolgreich aktiviert",
+    "deactivatedSuccess": "Benutzer erfolgreich deaktiviert",
+    "notAuthenticated": "Admin-Benutzer nicht authentifiziert"
+  },
+  "appointment": {
+    "otpSentSuccess": "OTP erfolgreich gesendet",
+    "bookedSuccess": "Termin erfolgreich gebucht",
+    "createdSuccess": "Termin erfolgreich erstellt",
+    "retrievedSuccess": "Termin erfolgreich abgerufen",
+    "retrievedAllSuccess": "Termine erfolgreich abgerufen",
+    "cancelledSuccess": "Termin erfolgreich storniert",
+    "approvedSuccess": "Termin erfolgreich bestätigt",
+    "completedSuccess": "Termin erfolgreich abgeschlossen",
+    "rejectedSuccess": "Termin erfolgreich abgelehnt",
+    "markedNotShownSuccess": "Termin erfolgreich als nicht erschienen markiert",
+    "rescheduledSuccess": "Termin erfolgreich verschoben",
+    "statisticsRetrievedSuccess": "Terminstatistiken erfolgreich abgerufen",
+    "patientBookingDisabled": "Die Online-Terminbuchung ist für diese Praxis derzeit deaktiviert. Bitte kontaktieren Sie die Praxis direkt, um einen Termin zu vereinbaren."
+  },
+  "otp": {
+    "tooManyRequests": "Bitte warten Sie, bevor Sie einen weiteren Code anfordern"
+  },
+  "clinicContact": {
+    "createdSuccess": "Klinikkontakt erfolgreich erstellt",
+    "retrievedSuccess": "Klinikkontakt erfolgreich abgerufen",
+    "retrievedAllSuccess": "Klinikkontakte erfolgreich abgerufen",
+    "updatedSuccess": "Klinikkontakt erfolgreich aktualisiert",
+    "deletedSuccess": "Klinikkontakt erfolgreich gelöscht"
+  },
+  "clinicUser": {
+    "loginSuccess": "Klinik-Benutzer erfolgreich eingeloggt",
+    "retrievedSuccess": "Klinik-Benutzer erfolgreich abgerufen",
+    "retrievedAllSuccess": "Klinik-Benutzer erfolgreich abgerufen",
+    "createdSuccess": "Klinik-Benutzer erfolgreich erstellt",
+    "updatedSuccess": "Klinik-Benutzer erfolgreich aktualisiert",
+    "deletedSuccess": "Klinik-Benutzer erfolgreich gelöscht",
+    "refreshedSuccess": "Klinik-Benutzer-Token erfolgreich aktualisiert",
+    "passwordChangedSuccess": "Passwort erfolgreich geändert",
+    "activatedSuccess": "Benutzer erfolgreich aktiviert",
+    "deactivatedSuccess": "Benutzer erfolgreich deaktiviert",
+    "notAuthenticated": "Klinik-Benutzer nicht authentifiziert",
+    "adminOnly": "Nur Administratoren können diese Aktion ausführen",
+    "typeChangeForbidden": "Nur Administratoren können die Rolle eines Benutzers ändern",
+    "specialtyDoctorOnly": "Fachrichtungen können nur einem Klinik-Benutzer vom Typ ARZT zugewiesen werden"
+  },
+  "doctorAvailability": {
+    "createdSuccess": "Arztverfügbarkeit erfolgreich erstellt",
+    "retrievedSuccess": "Arztverfügbarkeit erfolgreich abgerufen",
+    "retrievedAllSuccess": "Arztverfügbarkeiten erfolgreich abgerufen",
+    "updatedSuccess": "Arztverfügbarkeit erfolgreich aktualisiert",
+    "deletedSuccess": "Arztverfügbarkeit erfolgreich gelöscht",
+    "activatedSuccess": "Arztverfügbarkeit erfolgreich aktiviert",
+    "deactivatedSuccess": "Arztverfügbarkeit erfolgreich deaktiviert",
+    "slotsRetrievedSuccess": "Verfügbare Arzt-Terminfenster erfolgreich abgerufen",
+    "firstSlotRetrievedSuccess": "Erstes verfügbares Arzt-Terminfenster erfolgreich abgerufen",
+    "doctorTypeRequired": "Verfügbarkeiten können nur für einen Benutzer vom Typ ARZT erstellt werden",
+    "doctorOrAdminOnly": "Nur Ärzte oder Administratoren können auf Verfügbarkeiten zugreifen",
+    "notOwner": "Ärzte können nur ihre eigene Verfügbarkeit verwalten"
+  },
+  "doctorBlockedTime": {
+    "createdSuccess": "Abwesenheit erfolgreich erstellt",
+    "retrievedSuccess": "Abwesenheit erfolgreich abgerufen",
+    "retrievedAllSuccess": "Abwesenheiten erfolgreich abgerufen",
+    "deletedSuccess": "Abwesenheit erfolgreich gelöscht",
+    "doctorTypeRequired": "Abwesenheiten können nur für einen Benutzer vom Typ ARZT erstellt werden",
+    "notOwner": "Ärzte können nur ihre eigene Abwesenheit verwalten",
+    "overlapping": "Dieser Zeitraum überschneidet sich mit einer bestehenden Abwesenheit",
+    "hasAppointmentConflict": "Sie haben einen Termin in diesem Zeitraum. Bitte lehnen Sie ihn ab oder stornieren Sie ihn, bevor Sie diese Zeit blockieren."
+  },
+  "patient": {
+    "otpSentSuccess": "Einmal-Passwort (OTP) erfolgreich gesendet",
+    "loginSuccess": "Patient erfolgreich eingeloggt",
+    "refreshedSuccess": "Patienten-Token erfolgreich aktualisiert",
+    "retrievedSuccess": "Patient erfolgreich abgerufen",
+    "retrievedAllSuccess": "Patienten erfolgreich abgerufen",
+    "createdSuccess": "Patient erfolgreich erstellt",
+    "updatedSuccess": "Patient erfolgreich aktualisiert",
+    "deletedSuccess": "Patient erfolgreich gelöscht",
+    "notAuthenticated": "Patient nicht authentifiziert"
+  },
+  "clinicSetting": {
+    "retrievedSuccess": "Praxiseinstellung erfolgreich abgerufen",
+    "updatedSuccess": "Praxiseinstellung erfolgreich aktualisiert"
+  },
+  "article": {
+    "createdSuccess": "Artikel erfolgreich erstellt",
+    "retrievedSuccess": "Artikel erfolgreich abgerufen",
+    "retrievedAllSuccess": "Artikel erfolgreich abgerufen",
+    "updatedSuccess": "Artikel erfolgreich aktualisiert",
+    "deletedSuccess": "Artikel erfolgreich gelöscht",
+    "publishedSuccess": "Artikel erfolgreich veröffentlicht",
+    "archivedSuccess": "Artikel erfolgreich archiviert",
+    "alreadyPublished": "Artikel ist bereits veröffentlicht",
+    "alreadyArchived": "Artikel ist bereits archiviert"
+  },
+  "service": {
+    "createdSuccess": "Dienstleistung erfolgreich erstellt",
+    "retrievedSuccess": "Dienstleistung erfolgreich abgerufen",
+    "retrievedAllSuccess": "Dienstleistungen erfolgreich abgerufen",
+    "updatedSuccess": "Dienstleistung erfolgreich aktualisiert",
+    "deletedSuccess": "Dienstleistung erfolgreich gelöscht",
+    "activatedSuccess": "Dienstleistung erfolgreich aktiviert",
+    "deactivatedSuccess": "Dienstleistung erfolgreich deaktiviert"
+  },
+  "specialty": {
+    "createdSuccess": "Fachrichtung erfolgreich erstellt",
+    "retrievedSuccess": "Fachrichtung erfolgreich abgerufen",
+    "retrievedAllSuccess": "Fachrichtungen erfolgreich abgerufen",
+    "updatedSuccess": "Fachrichtung erfolgreich aktualisiert",
+    "deletedSuccess": "Fachrichtung erfolgreich gelöscht",
+    "activatedSuccess": "Fachrichtung erfolgreich aktiviert",
+    "deactivatedSuccess": "Fachrichtung erfolgreich deaktiviert"
+  },
+  "auth": {
+    "noTokenProvided": "Nicht autorisiert: Kein Token im Header gefunden.",
+    "invalidAuthentication": "Ungültige Authentifizierung",
+    "invalidOrExpiredToken": "Ungültiges oder abgelaufenes Token"
+  },
+  "errors": {
+    "badRequest": "Ungültige Anfrage",
+    "unauthorized": "Nicht autorisiert",
+    "forbidden": "Zugriff verweigert",
+    "notFound": "Nicht gefunden",
+    "conflict": "Konflikt",
+    "invalidResourceValue": "Ungültiger Ressourcenwert",
+    "overlappingValue": "Überschneidender Wert",
+    "validationFailed": "Validierung fehlgeschlagen",
+    "resourceAlreadyExists": "Ressource existiert bereits",
+    "resourceNotFound": "Ressource nicht gefunden",
+    "databaseError": "Datenbankfehler",
+    "invalidDatabaseRequest": "Ungültige Datenbankanfrage",
+    "fileTooLarge": "Datei zu groß",
+    "tooManyFiles": "Zu viele Dateien",
+    "fileUploadError": "Fehler beim Datei-Upload",
+    "internalServerError": "Interner Serverfehler",
+    "tooManyRequests": "Zu viele Anfragen"
+  },
+  "common": {
+    "success": "Erfolgreich",
+    "created": "Ressource erfolgreich erstellt",
+    "updated": "Ressource erfolgreich aktualisiert",
+    "deleted": "Ressource erfolgreich gelöscht"
+  },
+  "notifications": {
+    "appointmentBookedPatient": "Sehr geehrte(r) {{patientName}}, Ihr Termin am {{date}} um {{time}} Uhr wurde erfolgreich gebucht.",
+    "appointmentBookedDoctor": "Sehr geehrte(r) Frau/Herr Dr. {{doctorName}}, ein neuer Termin wurde für Patient(in) {{patientName}} am {{date}} um {{time}} Uhr gebucht.",
+    "appointmentRejectedPatient": "Sehr geehrte(r) {{patientName}}, Ihr Termin am {{date}} um {{time}} Uhr wurde leider abgelehnt.",
+    "otpCode": "Ihr Bestätigungscode lautet {{code}}. Er läuft in {{minutes}} Minuten ab."
+  }
+}

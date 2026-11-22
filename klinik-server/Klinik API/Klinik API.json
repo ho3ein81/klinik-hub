@@ -1,0 +1,2661 @@
+{
+  "v": 11,
+  "name": "Klinik API",
+  "folders": [
+    {
+      "v": 11,
+      "name": "Admin Users",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Admin User",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/admin/admin-users",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"arash\",\n  \"password\": \"klinik123\",\n  \"email\": \"stone.arash@gmail.com\",\n  \"phone\": \"989383474396\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Admin Users",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/admin-users",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Login",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/admin/admin-users/login",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "const response = pw.response.body\n\nif (response.success && response.data && response.data.accessToken) {\n    pw.env.set(\"adminToken\", response.data.accessToken)\n}",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"arash\",\n  \"password\": \"klinik123\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Admin User By Id",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/admin-users/d8e144c0-6f8e-445e-b9a2-6b7ddbba4ae5",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"isActive\": false\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Me Admin User",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/admin-users/me",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Admin User By Id",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/admin/admin-users",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    },
+    {
+      "v": 11,
+      "name": "Clinics",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Clinic Admin Portal",
+          "method": "POST",
+          "endpoint": "http://localhost:3000/api/v1/admin/clinics",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"yazdani2\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinics Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/clinics",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinic By Id Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/clinics/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Clinic By Id Admin Portal ",
+          "method": "POST",
+          "endpoint": "http://localhost:3000/api/v1/admin/clinics",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"yazdani2\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Clinic By Id Admin Portal ",
+          "method": "POST",
+          "endpoint": "http://localhost:3000/api/v1/admin/clinics",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"yazdani2\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinics Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/clinics",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Clinic By Id Clinic Portal ",
+          "method": "POST",
+          "endpoint": "http://localhost:3000/api/v1/admin/clinics",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"yazdani2\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    },
+    {
+      "v": 11,
+      "name": "Clinic Users",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Clinic User Admin Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/admin/clinic-users",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"yazdani2\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinic Users Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/clinics",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinic User By Id Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/clinics/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Clinic User By Id Admin Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/clinic-users/348ef0d9-a56e-4293-a1b5-7641c85f8877",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"firstName\": \"hamid\",\n  \"lastName\": \"yazdani\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Clinic User By Id Admin Portal",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/admin/clinic-users/348ef0d9-a56e-4293-a1b5-7641c85f8877",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Create Clinic User Clinic Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"email\": \"yazdani2@test.com\",\n  \"password\": \"klinik123\",\n  \"type\": \"DOCTOR\",\n  \"firstName\": \"hamid\",\n  \"lastName\": \"yazdani\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinic Users Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinic User By Id Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users/348ef0d9-a56e-4293-a1b5-7641c85f8877",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Clinic User By Id Clinic Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users/348ef0d9-a56e-4293-a1b5-7641c85f8877",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "multipart/form-data",
+            "body": [
+              {
+                "key": "avatar",
+                "active": true,
+                "isFile": false,
+                "value": ""
+              }
+            ]
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Clinic User By Id Clinic Portal",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users/348ef0d9-a56e-4293-a1b5-7641c85f8877",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Login Clinic User Clinic Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users/login",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": false
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"email\": \"yazdani@test.com\",\n  \"password\": \"klinik123\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Refresh Token Clinic User Clinic Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users/refresh-token",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": false
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"refreshToken\": \"<<refreshToken>>\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": "Refreshes the clinic user's access token. This endpoint does not require an access token."
+        },
+        {
+          "v": "17",
+          "name": "Me Clinic User Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users/me",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Change Password Clinic User Clinic Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users/change-password",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"currentPassword\": \"klinik123\",\n  \"newPassword\": \"newPassword123\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": "Changes the currently authenticated clinic user's password."
+        },
+        {
+          "v": "17",
+          "name": "Get Avatar Clinic User Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/clinic-users/read-resources/avatar/1789047724294-laugh.jpeg",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Avatar Clinic User Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/clinic-users/read-resources/avatar/1789047724294-laugh.jpeg",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [
+        {
+          "key": "refreshToken",
+          "value": "",
+          "type": "text"
+        }
+      ],
+      "description": null
+    },
+    {
+      "v": 11,
+      "name": "Services",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Service Admin Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/admin/services",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"clinicId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"name\": \"Blood Test\",\n  \"description\": \"General blood work and lab analysis\",\n  \"price\": 25.5,\n  \"duration\": 15,\n  \"isActive\": true,\n  \"order\": 1\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Services Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/services",
+          "params": [
+            {
+              "key": "page",
+              "value": "1",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "limit",
+              "value": "20",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Service By Id Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/services/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Service By Id Admin Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/services/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"price\": 30,\n  \"isActive\": false\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Service By Id Admin Portal",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/admin/services/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Create Service Clinic Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/clinic/services",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"Blood Test\",\n  \"description\": \"General blood work and lab analysis\",\n  \"price\": 25.5,\n  \"duration\": 15,\n  \"isActive\": true,\n  \"order\": 1\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Services Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/services",
+          "params": [
+            {
+              "key": "page",
+              "value": "1",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "limit",
+              "value": "20",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Service By Id Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/services/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Service By Id Clinic Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/clinic/services/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"price\": 30,\n  \"isActive\": false\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Service By Id Clinic Portal",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/clinic/services/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    },
+    {
+      "v": 11,
+      "name": "Clinic Contacts",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Clinic Contact Admin Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/admin/clinic-contacts",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"clinicId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"name\": \"phone\",\n  \"contactType\": \"PHONE\",\n  \"value\": \"+445327773\",\n  \"isPrimary\": true\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinic Contacts Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/clinic-contacts",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinic Contact By Id Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/clinic-contacts/78f4cca0-17ba-4799-9a7e-ade579e6324d",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Clinic Contact By Id Admin Portal ",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/clinic-contacts/78f4cca0-17ba-4799-9a7e-ade579e6324d",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"contactType\": \"PHONE\",\n  \"value\": \"445327773\",\n  \"isPrimary\": true\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Clinic Contact By Id Admin Portal ",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/admin/clinic-contacts/78f4cca0-17ba-4799-9a7e-ade579e6324d",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"yazdani2\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Create Clinic Contact Clinic Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/clinic/clinic-contacts",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"phone2\",\n  \"contactType\": \"PHONE\",\n  \"value\": \"445327774\",\n  \"isPrimary\": true\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinic Contacts Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/clinic-contacts",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Clinic Contact By Id Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/clinic-contacts",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Clinic Contact By Id Clinic Portal ",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/clinic/clinic-contacts/78f4cca0-17ba-4799-9a7e-ade579e6324d",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"contactType\": \"EMAIL\",\n  \"isPrimary\": \"t\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Clinic Contact By Id Clinic Portal",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/clinic/clinic-contacts/0283b95e-39c6-45f9-9304-37ef6f9a54d8",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"name\": \"yazdani2\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    },
+    {
+      "v": 11,
+      "name": "Doctor Availability",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Create Doctor Availability Admin Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/admin/doctor-availabilities",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"clinicId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"doctorId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"dayOfWeek\": \"MONDAY\",\n  \"startTime\": \"09:00\",\n  \"endTime\": \"17:00\",\n  \"isActive\": true\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Doctor Availabilities Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/doctor-availabilities",
+          "params": [
+            {
+              "key": "page",
+              "value": "1",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "limit",
+              "value": "20",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "clinicId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "doctorId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "dayOfWeek",
+              "value": "MONDAY",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "isActive",
+              "value": "true",
+              "active": false,
+              "description": ""
+            }
+          ],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Doctor Availability By Id Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/doctor-availabilities/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Doctor Availability By Id Admin Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/doctor-availabilities/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"startTime\": \"10:00\",\n  \"endTime\": \"18:00\",\n  \"isActive\": true\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Doctor Availability By Id Admin Portal",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/admin/doctor-availabilities/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Create Doctor Availability Clinic Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/clinic/doctor-availabilities",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"doctorId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"dayOfWeek\": \"MONDAY\",\n  \"startTime\": \"09:00\",\n  \"endTime\": \"17:00\",\n  \"isActive\": true\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Doctor Availabilities Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/doctor-availabilities",
+          "params": [
+            {
+              "key": "page",
+              "value": "1",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "limit",
+              "value": "20",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "doctorId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "dayOfWeek",
+              "value": "MONDAY",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "isActive",
+              "value": "true",
+              "active": false,
+              "description": ""
+            }
+          ],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Doctor Availability By Id Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/doctor-availabilities/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Update Doctor Availability By Id Clinic Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/clinic/doctor-availabilities/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"startTime\": \"10:00\",\n  \"endTime\": \"18:00\",\n  \"isActive\": true\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Delete Doctor Availability By Id Clinic Portal",
+          "method": "DELETE",
+          "endpoint": "<<baseUrl>>/clinic/doctor-availabilities/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": null
+        },
+        {
+          "v": "17",
+          "name": "Get Doctor Available Slots For Date Patient Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/patient/doctor-availabilities/slots",
+          "params": [
+            {
+              "key": "doctorId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "date",
+              "value": "2026-09-13",
+              "active": true,
+              "description": "Target date in YYYY-MM-DD format"
+            }
+          ],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "token": "",
+            "authActive": false
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": "Returns available time slots for a doctor on a specific date, excluding slots overlapping existing appointments. This endpoint supports anonymous and authenticated patients."
+        },
+        {
+          "v": "17",
+          "name": "Get First Available Slot For Doctor Patient Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/patient/doctor-availabilities/slots/first-available",
+          "params": [
+            {
+              "key": "doctorId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "date",
+              "value": "2026-09-13",
+              "active": false,
+              "description": "Optional starting date. Defaults to today when omitted."
+            }
+          ],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "token": "",
+            "authActive": false
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": "Returns the earliest available slot for the doctor, searching from the specified date for up to 30 days. This endpoint supports anonymous and authenticated patients."
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    },
+    {
+      "v": 11,
+      "name": "Appointments",
+      "folders": [],
+      "requests": [
+        {
+          "v": "17",
+          "name": "Request OTP for Anonymous Booking (Patient Portal)",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/patient/appointments/anonymous/request-otp",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"phone\": \"09123456789\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": "Request SMS OTP code before booking an appointment as an unauthenticated guest user."
+        },
+        {
+          "v": "17",
+          "name": "Book Appointment Anonymous (Patient Portal)",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/patient/appointments/anonymous",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "none",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"phone\": \"09123456789\",\n  \"code\": \"123456\",\n  \"firstName\": \"Ali\",\n  \"lastName\": \"Rezai\",\n  \"dateOfBirth\": \"1995-05-15T00:00:00.000Z\",\n  \"clinicId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"doctorId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"subject\": \"General Checkup\",\n  \"description\": \"Experiencing mild headaches\",\n  \"date\": \"2026-09-20T00:00:00.000Z\",\n  \"startTime\": \"09:00\",\n  \"endTime\": \"09:30\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": "Book appointment without login using OTP code."
+        },
+        {
+          "v": "17",
+          "name": "Book Appointment as Logged-in Patient (Patient Portal)",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/patient/appointments",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<patientToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"doctorId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"subject\": \"Follow up\",\n  \"description\": \"Routine checkup after prescription\",\n  \"date\": \"2026-09-20T00:00:00.000Z\",\n  \"startTime\": \"10:00\",\n  \"endTime\": \"10:30\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Get My Appointments (Patient Portal)",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/patient/appointments",
+          "params": [
+            {
+              "key": "page",
+              "value": "1",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "limit",
+              "value": "20",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "doctorId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "status",
+              "value": "SCHEDULED",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "date",
+              "value": "2026-09-20T00:00:00.000Z",
+              "active": false,
+              "description": ""
+            }
+          ],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<patientToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Get My Appointment By Id (Patient Portal)",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/patient/appointments/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<patientToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Cancel Appointment (Patient Portal)",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/patient/appointments/803565ab-df77-4549-b683-f111cfa1789e/cancel",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<patientToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Create Appointment Clinic Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/clinic/appointments",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"patientId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"doctorId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"subject\": \"Consultation\",\n  \"description\": \"Initial clinic visit\",\n  \"date\": \"2026-09-20T00:00:00.000Z\",\n  \"startTime\": \"11:00\",\n  \"endTime\": \"11:30\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": "Provide either patientId OR (firstName, lastName, phone)."
+        },
+        {
+          "v": "17",
+          "name": "Get Appointments Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/appointments",
+          "params": [
+            {
+              "key": "page",
+              "value": "1",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "limit",
+              "value": "20",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "doctorId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "patientId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "status",
+              "value": "SCHEDULED",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "date",
+              "value": "2026-09-20T00:00:00.000Z",
+              "active": false,
+              "description": ""
+            }
+          ],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Get Appointment By Id Clinic Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/clinic/appointments/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Approve Appointment Clinic Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/clinic/appointments/803565ab-df77-4549-b683-f111cfa1789e/approve",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Complete Appointment Clinic Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/clinic/appointments/803565ab-df77-4549-b683-f111cfa1789e/complete",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Reject Appointment Clinic Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/clinic/appointments/803565ab-df77-4549-b683-f111cfa1789e/reject",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Mark No-Show Appointment Clinic Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/clinic/appointments/803565ab-df77-4549-b683-f111cfa1789e/not-show",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<clinicToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Create Appointment Admin Portal",
+          "method": "POST",
+          "endpoint": "<<baseUrl>>/admin/appointments",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"clinicId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"patientId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"doctorId\": \"803565ab-df77-4549-b683-f111cfa1789e\",\n  \"subject\": \"Administrative Appointment\",\n  \"description\": \"Booked by System Administrator\",\n  \"date\": \"2026-09-20T00:00:00.000Z\",\n  \"startTime\": \"14:00\",\n  \"endTime\": \"14:30\"\n}\n"
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": "Requires clinicId. Provide either patientId OR (firstName, lastName, phone)."
+        },
+        {
+          "v": "17",
+          "name": "Get Appointments Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/appointments",
+          "params": [
+            {
+              "key": "page",
+              "value": "1",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "limit",
+              "value": "20",
+              "active": true,
+              "description": ""
+            },
+            {
+              "key": "clinicId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "doctorId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "patientId",
+              "value": "803565ab-df77-4549-b683-f111cfa1789e",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "status",
+              "value": "SCHEDULED",
+              "active": false,
+              "description": ""
+            },
+            {
+              "key": "date",
+              "value": "2026-09-20T00:00:00.000Z",
+              "active": false,
+              "description": ""
+            }
+          ],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Get Appointment By Id Admin Portal",
+          "method": "GET",
+          "endpoint": "<<baseUrl>>/admin/appointments/803565ab-df77-4549-b683-f111cfa1789e",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Approve Appointment Admin Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/appointments/803565ab-df77-4549-b683-f111cfa1789e/approve",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Complete Appointment Admin Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/appointments/803565ab-df77-4549-b683-f111cfa1789e/complete",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Reject Appointment Admin Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/appointments/803565ab-df77-4549-b683-f111cfa1789e/reject",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Mark No-Show Appointment Admin Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/appointments/803565ab-df77-4549-b683-f111cfa1789e/not-show",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        },
+        {
+          "v": "17",
+          "name": "Cancel Appointment Admin Portal",
+          "method": "PATCH",
+          "endpoint": "<<baseUrl>>/admin/appointments/803565ab-df77-4549-b683-f111cfa1789e/cancel",
+          "params": [],
+          "headers": [
+            {
+              "key": "Authorization",
+              "value": "Bearer <<adminToken>>",
+              "active": true,
+              "description": ""
+            }
+          ],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {},
+          "description": ""
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "description": null
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authType": "none",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [
+    {
+      "key": "baseUrl",
+      "initialValue": "http://localhost:3000/api/v1",
+      "currentValue": "",
+      "secret": false
+    },
+    {
+      "key": "adminToken",
+      "initialValue": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzYTdlYThkYS05MjZhLTQ5NWEtYjZmZi01NDUzYTkzM2M3ZDMiLCJ1c2VyVHlwZSI6ImFkbWluVXNlciIsImlhdCI6MTc4OTA0MjU0NiwiZXhwIjoxNzg5MTI4OTQ2fQ.n0rLaaQHdgZAS4aS5hoPQAhjzoJNHF8FnFy09FmR4EU",
+      "currentValue": "",
+      "secret": false
+    },
+    {
+      "key": "clinicToken",
+      "initialValue": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzMxNmFjYi1lMzRlLTQ5YmQtYWY0Yy1iMjQ5NmRhYTFjMTgiLCJ1c2VyVHlwZSI6ImNsaW5pY1VzZXIiLCJpYXQiOjE3ODkwNDczNDIsImV4cCI6MTc4OTEzMzc0Mn0.ErjI971MFRhjj2cAkFTfKz4kLT_aUoSwsEMmFUh8RbU",
+      "currentValue": "",
+      "secret": false
+    }
+  ],
+  "description": null
+}
